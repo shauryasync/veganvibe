@@ -7,3 +7,33 @@
 #navlogo{
     width: 300px;
 }
+
+.slogan{
+    text-align: center;
+    background-color: #4CAF50;
+    color: whitesmoke;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+
+#navlogo{
+    width: 120px;
+}
+
+.nav-links{
+    display: flex;
+    gap:40px;
+    align-items: center;
+}
+
+a{
+    margin-left: 20px;
+    text-decoration: none;
+}
+
