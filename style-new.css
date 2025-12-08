@@ -165,11 +165,21 @@ html, body {
   height: 100%;
 }
 
+img {
+  display: block;          /* avoids inline gaps */
+  max-width: 100%;
+  height: auto;
+}
+
 .card-img {
   width: 100%;
-  height: 140px;
+  height: 140px;           /* fixed visual area for cards (you already have) */
   object-fit: cover;
+  display: block;
+  aspect-ratio: 16/9;      /* extra safety on modern browsers */
+  min-height: 140px;       /* ensure space reserved before load */
 }
+
 
 .card-content {
   padding: 12px;
@@ -217,12 +227,26 @@ html, body {
   align-items: flex-start;
 }
 
+.recipe-top {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
 .recipe-top img {
-  border-radius: var(--radius);
   width: clamp(260px, 30vw, 350px);
   height: auto;
+  aspect-ratio: 4/3;
   object-fit: cover;
+  border-radius: var(--radius);
 }
+
+.recipe-top .card-btn {
+  margin-top: 12px;
+  display: inline-block;
+}
+
 
 .meta {
   color: var(--muted);
