@@ -115,14 +115,17 @@ p, li {
 }
 
 #explore-recipes {
+  display: inline-block;
   padding: 10px 20px;
   background-color: var(--green);
   color: white;
-  border: none;
   border-radius: 4px;
-  margin-top: 22px;
   cursor: pointer;
+  text-decoration: none;
+  margin-top: 22px;
+  font-size: 16px;
 }
+
 
 /* =======================
    CATEGORIES
