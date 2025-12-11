@@ -261,19 +261,14 @@ img {
   color: var(--text);
 }
 
-.recipe-top {
+.recipe-top > div {
+  flex: 1;
   display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start; 
 }
 
-.recipe-top {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
+
 
 .recipe-top img {
   width: clamp(260px, 30vw, 350px);
@@ -285,8 +280,10 @@ img {
 
 .recipe-top .card-btn {
   margin-top: 12px;
-  display: inline-block;
+  margin-bottom: 12px;
+  align-self: flex-start;
 }
+
 
 
 .meta {
