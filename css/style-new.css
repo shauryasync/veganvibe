@@ -84,12 +84,34 @@ p, li {
 }
 
 /* Responsive Navbar */
+
+.menu-btn{
+  display: none;
+}
+
 @media (max-width: 700px) {
-  .navbar {
+  .menu-btn{
+    display: block;
+    font-size: 28px;
+  }
+  .nav-links {
+    display: none;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+  }
+  .nav-links.active {
+    display: flex;
   }
 }
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 24px;
+  cursor: pointer;
+}
+
 
 /* =======================
    HERO SECTION
@@ -200,6 +222,10 @@ p, li {
   overflow: hidden;
   height: 100%;
 }
+.recipe-card {
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+}
+
 
 img {
   display: block;          /* avoids inline gaps */
@@ -245,6 +271,10 @@ img {
   border-radius: var(--radius);
   text-align: center;
   cursor: pointer;
+}
+.card-btn:hover,
+#explore-recipes:hover {
+  background-color: #3e9742;
 }
 
 /* =======================
