@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 
+
 :root {
   --green: #4CAF50;
   --text: #333;
@@ -83,11 +84,18 @@ p, li {
   color: var(--green);
 }
 
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 24px;
+  cursor: pointer;
+}
+
 /* Responsive Navbar */
 
-.menu-btn{
-  display: none;
-}
 
 @media (max-width: 700px) {
   .menu-btn{
@@ -102,14 +110,6 @@ p, li {
   .nav-links.active {
     display: flex;
   }
-}
-
-.menu-btn {
-  background: none;
-  border: none;
-  color: var(--text);
-  font-size: 24px;
-  cursor: pointer;
 }
 
 
