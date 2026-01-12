@@ -32,7 +32,8 @@ let recipes = [{
     src:"images/aloo-gobhi.jpg", title:"Aloo Gobhi", time:"45mins", href:"#",category:"Dinner",alt:"Aloo Gobhi"
 }];
 
-
+if(section){
+    
 for(let i = 0; i < recipes.length; i++){
   let article = document.createElement("article");
   let img = document.createElement("img");
@@ -58,10 +59,10 @@ for(let i = 0; i < recipes.length; i++){
   div.appendChild(h3);
   div.appendChild(p);
   div.appendChild(a);
-
   section.appendChild(article);
 }
 
+}
 
 /* =======================
    SEARCH & FILTER LOGIC
@@ -70,8 +71,8 @@ for(let i = 0; i < recipes.length; i++){
 let searchbtn = document.querySelector("#search-btn");
 let searchinput = document.querySelector("#search-input");
 
-
-searchbtn.addEventListener("click",()=>{
+if(searchbtn){
+    searchbtn.addEventListener("click",()=>{
     let recipecards = document.querySelectorAll(".recipe-card");
     let searchinputL = searchinput.value.toLowerCase();
     for(let i = 0; i < recipecards.length; i++){
@@ -84,3 +85,5 @@ searchbtn.addEventListener("click",()=>{
     }
     searchinput.value = "";
 });
+
+}
