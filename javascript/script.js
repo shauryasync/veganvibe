@@ -61,3 +61,26 @@ for(let i = 0; i < recipes.length; i++){
 
   section.appendChild(article);
 }
+
+
+/* =======================
+   SEARCH & FILTER LOGIC
+   ======================= */
+
+let searchbtn = document.querySelector("#search-btn");
+let searchinput = document.querySelector("#search-input");
+
+
+searchbtn.addEventListener("click",()=>{
+    let recipecards = document.querySelectorAll(".recipe-card");
+    let searchinputL = searchinput.value.toLowerCase();
+    for(let i = 0; i < recipecards.length; i++){
+        let title = recipecards[i].querySelector(".card-title").textContent.toLowerCase();
+        if(!title.includes(searchinputL)){
+            recipecards[i].classList.add("hidden");
+        }else{
+            recipecards[i].classList.remove("hidden");
+        }
+    }
+    searchinput.value = "";
+});

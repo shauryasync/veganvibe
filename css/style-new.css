@@ -214,6 +214,10 @@ p, li {
   margin: 0 auto;
 }
 
+.recipe-card.hidden{
+  display: none;
+}
+
 .recipe-card {
   background: var(--soft-bg);
   border-radius: var(--radius);
