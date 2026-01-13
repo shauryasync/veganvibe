@@ -42,6 +42,8 @@ for(let i = 0; i < recipes.length; i++){
   let p = document.createElement("p");
   let a = document.createElement("a");
   article.classList.add("recipe-card");
+  //DATASET PROPERTY FOR QUERYSTRING SEARCH
+  article.dataset.category = recipes[i].category.toLowerCase();
   img.classList.add("card-img");
   div.classList.add("card-content");
   h3.classList.add("card-title");
@@ -61,7 +63,6 @@ for(let i = 0; i < recipes.length; i++){
   div.appendChild(a);
   section.appendChild(article);
 }
-
 }
 
 /* =======================
@@ -86,4 +87,23 @@ if(searchbtn){
     searchinput.value = "";
 });
 
+}
+
+/* ============================
+   HOME CATEGORY BUTTON SEARCH
+   ============================ */
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const categoryString = urlParams.get('category');
+
+if(categoryString){
+    let recipecards = document.querySelectorAll(".recipe-card");
+    for(let i = 0; i < recipecards.length; i++){
+        let cardCategory = recipecards[i].dataset.category;
+        if(cardCategory !== categoryString.toLowerCase()){
+            recipecards[i].classList.add("hidden");
+        }else{
+            recipecards[i].classList.remove("hidden");
+        }
+    }
 }

@@ -162,12 +162,15 @@ p, li {
   gap: var(--gap);
 }
 
-.categories div {
+.categories a {
   background: var(--soft-bg-2);
   padding: 25px;
   font-size: 20px;
   border-radius: 6px;
   text-align: center;
+  text-decoration: none;
+  color:#333;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
